@@ -8,11 +8,7 @@ import {ITEMS} from "../mock-items";
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent implements OnInit {
-  item: Item = {
-    name: 'Item 1',
-    price: 5,
-    stockUrgency: 'urgent'
-  };
+  selectedItem: Item;
   items = ITEMS;
 
   constructor() { }
@@ -20,4 +16,11 @@ export class ItemsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSelect(item: Item): void{
+    this.selectedItem=item;
+  }
+
+
+
 }
+
