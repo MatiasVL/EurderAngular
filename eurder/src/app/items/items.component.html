@@ -1,9 +1,16 @@
 <h2>Items</h2>
-<h3>{{item.name}}</h3>
-<img
-  src="assets/box.jpg"
-  width="160"
-  alt="item picture">
-<div><span>Price: </span>{{item.price}}</div>
-<div><span>Stock urgency: </span>{{item.stockUrgency}}</div>
+<ul class="items">
+  <li *ngFor="let item of items">
+    <h3>{{item.name | titlecase}}</h3>
+    <img
+      src="assets/box.jpg"
+      width="160"
+      alt="item picture">
+    <div><span>Price: </span>{{item.price | currency}}</div>
+    <div><span>Stock urgency: </span>{{item.stockUrgency}}</div>
+    <div><span>__________________</span> </div>
+  </li>
+</ul>
+
+
 

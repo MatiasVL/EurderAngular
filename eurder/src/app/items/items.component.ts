@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Item} from "../item";
+import {ITEMS} from "../mock-items";
 
 @Component({
   selector: 'app-items',
@@ -12,6 +13,7 @@ export class ItemsComponent implements OnInit {
     price: 5,
     stockUrgency: 'urgent'
   };
+  items = ITEMS;
 
   constructor() { }
 
