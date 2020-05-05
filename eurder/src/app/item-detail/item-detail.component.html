@@ -1,0 +1,12 @@
+<div *ngIf="item">
+  <h2>Details of {{item.name|lowercase}}</h2>
+  <div><span>Id: </span>{{item.id}}</div>
+  <div><label>Name:
+    <input [(ngModel)]="item.name" placeholder="name"/>
+  </label></div>
+  <div><span>Description: </span>{{item.description}}</div>
+  <div><span>Price: </span>{{item.price | currency}}</div>
+  <div><span>Stock: </span>{{item.stock}}</div>
+</div>
+<button>Edit</button>
+<button (click)="goBack()">Back to previous awesome page</button>
