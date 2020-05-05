@@ -1,12 +1,12 @@
 .items {
-  margin: 0 0 1em 0;
+  text-align: center;
   list-style-type: none;
   padding: 0;
   width: 50em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 .items li {
   cursor: pointer;
@@ -33,6 +33,12 @@
 
 .itemHeader {
   margin: -15px 0px -15px 5px;
+}
+
+.itemOverviewHeader{
+  display: flex;
+  justify-content: space-between;
+  width: 48em;
 }
 
 

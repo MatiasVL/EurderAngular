@@ -1,19 +1,20 @@
-<h2>Items</h2>
+<div class="itemOverviewHeader"><h2>Item overview</h2>
+  <app-item-search></app-item-search>
+</div>
 <ul class="items">
   <li *ngFor="let item of items">
     <a routerLink="/detail/{{item.id}}">
-    <div class="itemHeader"><h3>{{item.name | titlecase}}</h3></div>
-    <img
-      src="assets/box.jpg"
-      width="160"
-      alt="item picture">
-    <div><span>Price: </span>{{item.price | currency}}</div>
-    <div><span>Stock urgency: </span>{{item.stockUrgency}}</div>
-    <div><span>__________________</span></div>
+      <div class="itemHeader"><h3>{{item.name | titlecase}}</h3></div>
+      <img
+        src="assets/box.jpg"
+        width="160"
+        alt="item picture">
+      <div><span>Price: </span>{{item.price | currency}}</div>
+      <div><span>Stock urgency: </span>{{item.stockUrgency}}</div>
+      <div><span>__________________</span></div>
     </a>
   </li>
 </ul>
-<app-item-search></app-item-search>
 
 
 

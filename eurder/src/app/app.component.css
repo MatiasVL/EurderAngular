@@ -5,6 +5,18 @@
   flex-direction: row;
 }
 
+.footing {
+  margin-left: 10em;
+  display: flex;
+  flex-direction: row;
+}
+
+.titleBottom{
+  font-size: 4em;
+}
+
+
+
 /* AppComponent's private CSS styles */
 h1 {
   font-size: 1.2em;
