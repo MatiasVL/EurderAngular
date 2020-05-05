@@ -1,9 +1,8 @@
 <h2>Items</h2>
 <ul class="items">
-  <li *ngFor="let item of items"
-      [class.selected]="item===selectedItem"
-      (click)="onSelect(item)">
-    <h3>{{item.name | titlecase}}</h3>
+  <li *ngFor="let item of items">
+    <a routerLink="/detail/{{item.id}}">
+    <div class="itemHeader"><h3>{{item.name | titlecase}}</h3></div>
     <img
       src="assets/box.jpg"
       width="160"
@@ -11,18 +10,10 @@
     <div><span>Price: </span>{{item.price | currency}}</div>
     <div><span>Stock urgency: </span>{{item.stockUrgency}}</div>
     <div><span>__________________</span></div>
+    </a>
   </li>
 </ul>
 
-<div *ngIf="selectedItem">
-  <h2>Details of {{selectedItem.name|lowercase}}</h2>
-  <div><span>Id: </span>{{selectedItem.id}}</div>
-  <div><label>Name:
-      <input [(ngModel)]="selectedItem.name" placeholder="name"/>
-    </label></div>
-  <div><span>Description: </span>{{selectedItem.description}}</div>
-  <div><span>Price: </span>{{selectedItem.price | currency}}</div>
-  <div><span>Stock: </span>{{selectedItem.stock}}</div>
-</div>
+
 
 
