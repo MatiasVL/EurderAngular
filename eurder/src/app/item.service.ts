@@ -1,21 +1,23 @@
 import {Injectable} from '@angular/core';
 import {Item} from "./item";
-import {ITEMS} from "./mock-items";
 import {Observable, of} from "rxjs";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemService {
 
-  constructor() {
+  constructor(private http: HttpClient) {
   }
+  private itemsUrl = 'api/items';
 
   getItems(): Observable<Item []> {
-    return of(ITEMS);
+  return this.http.get<Item[]>(this.itemsUrl)
   }
 
   getItem(id: string): Observable<Item> {
-    return of(ITEMS.find(item => item.id === id));
+    const url = `${this.itemsUrl}/${id}`;
+    return this.http.get<Item>(url);
   }
 }
