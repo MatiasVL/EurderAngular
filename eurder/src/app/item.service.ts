@@ -20,4 +20,11 @@ export class ItemService {
     const url = `${this.itemsUrl}/${id}`;
     return this.http.get<Item>(url);
   }
+
+  searchItems(term: string): Observable<Item[]>{
+    if (!term.trim()){
+      return of([]);
+    }
+    return this.http.get<Item[]>(`${this.itemsUrl}/?name=${term}`);
+  }
 }

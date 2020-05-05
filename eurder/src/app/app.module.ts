@@ -8,12 +8,14 @@ import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
+import { ItemSearchComponent } from './item-search/item-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemsComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    ItemSearchComponent
   ],
   imports: [
     BrowserModule,
