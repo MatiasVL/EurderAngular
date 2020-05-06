@@ -10,6 +10,7 @@ import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './in-memory-data.service';
 import {ItemSearchComponent} from './item-search/item-search.component';
 import { ItemCreateComponent } from './item-create/item-create.component';
+import { ItemUpdateComponent } from './item-update/item-update.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ItemCreateComponent } from './item-create/item-create.component';
     ItemsComponent,
     ItemDetailComponent,
     ItemSearchComponent,
-    ItemCreateComponent
+    ItemCreateComponent,
+    ItemUpdateComponent
   ],
   imports: [
     BrowserModule,

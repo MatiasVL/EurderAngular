@@ -11,6 +11,9 @@ export class ItemService {
   constructor(private http: HttpClient) {
   }
   private itemsUrl = 'api/items';
+  httpOptions={
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+  };
 
   getItems(): Observable<Item []> {
   return this.http.get<Item[]>(this.itemsUrl)
@@ -38,5 +41,9 @@ export class ItemService {
       stock: amount
     };
     return this.http.post <Item>(`${this.itemsUrl}/create`,item);
+  }
+
+  updateItem(item: Item): Observable<any>{
+    return this.http.put(this.itemsUrl,item,this.httpOptions)
   }
 }
