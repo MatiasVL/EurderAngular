@@ -27,4 +27,16 @@ export class ItemService {
     }
     return this.http.get<Item[]>(`${this.itemsUrl}/?name=${term}`);
   }
+
+  createItem (name, description, price, amount): Observable<Item> {
+    const item = {
+      id: 10,
+      name: name,
+      description: description,
+      price: price,
+      stockUrgency: "to do",
+      stock: amount
+    };
+    return this.http.post <Item>(`${this.itemsUrl}/create`,item);
+  }
 }

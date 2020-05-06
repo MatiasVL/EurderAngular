@@ -1,10 +1,10 @@
 <div *ngIf="item">
   <h2>Details of {{item.name|lowercase}}</h2>
   <div><span>Id: </span>{{item.id}}</div>
-  <div><label>Name:
+  <div>Name:
     <input [(ngModel)]="item.name" placeholder="name"/>
-  </label></div>
-  <div><span>Description: </span>{{item.description}}</div>
+  </div>
+  <div>Description: {{item.description}}</div>
   <div><span>Price: </span>{{item.price | currency}}</div>
   <div><span>Stock: </span>{{item.stock}}</div>
 </div>
