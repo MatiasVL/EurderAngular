@@ -38,4 +38,6 @@ export class ItemUpdateComponent implements OnInit {
       .subscribe(()=>this.goBack());
   }
 
+  edit(){}
+
 }

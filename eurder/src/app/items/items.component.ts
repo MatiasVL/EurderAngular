@@ -19,8 +19,5 @@ export class ItemsComponent implements OnInit {
   getItems(): void {
     this.itemService.getItems().subscribe(items=>this.items = items);
   }
-
-
-
 }
 

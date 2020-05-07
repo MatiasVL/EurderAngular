@@ -12,7 +12,6 @@ import {ItemsComponent} from "../items/items.component";
 })
 export class ItemCreateComponent implements OnInit {
 
-
   constructor(
     private route: ActivatedRoute,
     private itemService: ItemService,
@@ -23,15 +22,13 @@ export class ItemCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
   goBack(): void {
     this.location.back();
   }
 
   createItem(name, description, price, amount): void {
     this.itemService.createItem({name}, {description}, {price}, {amount})
-      .subscribe(item => {
-        this.items.push(item);
-      });
+      .subscribe();
   }
-
 }

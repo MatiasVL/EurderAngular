@@ -7,7 +7,7 @@
   <div>Description: {{item.description}}</div>
   <div><span>Price: </span>{{item.price | currency}}</div>
   <div><span>Stock: </span>{{item.stock}}</div>
+  <button><a routerLink="/detail/{{item.id}}/edit"></a> Edit</button>
 </div>
-<button><a routerLink="/detail/{{item.id}}/edit"></a> Edit</button>
 <router-outlet></router-outlet>
 <button (click)="goBack()">Back to previous awesome page</button>
