@@ -4,9 +4,15 @@
   <div>Name:
     <input [(ngModel)]="item.name" placeholder="name"/>
   </div>
-  <div>Description: {{item.description}}</div>
-  <div><span>Price: </span>{{item.price | currency}}</div>
-  <div><span>Stock: </span>{{item.stock}}</div>
+  <div>Description:
+    <input [ngModel]="item.description" placeholder="description"/>
+  </div>
+  <div>Price:
+    <input [ngModel]="item.price" placeholder="price"/>
+  </div>
+  <div>Stock:
+    <input [ngModel]="item.stock" placeholder="stock"/>
+  </div>
 </div>
 <button (click)="edit()">Save</button>
 <button (click)="goBack()">Cancel</button>
