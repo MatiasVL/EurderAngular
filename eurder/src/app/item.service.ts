@@ -11,7 +11,7 @@ export class ItemService {
   constructor(private http: HttpClient) {
   }
 
-  private itemsUrl = 'http://eurder-switchfully-solution.herokuapp.com/items';
+  private itemsUrl = 'https://eurder-switchfully-solution.herokuapp.com/items';
   httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
@@ -45,6 +45,6 @@ export class ItemService {
   }
 
   updateItem(item: Item): Observable<any> {
-    return this.http.put(this.itemsUrl, item, this.httpOptions)
+    return this.http.put(this.itemsUrl, item, this.httpOptions);
   }
 }
