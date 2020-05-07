@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Item} from "./item";
 import {Observable, of} from "rxjs";
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {tap} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +30,9 @@ export class ItemService {
     if (!term.trim()) {
       return of([]);
     }
-    return this.http.get<Item[]>(`${this.itemsUrl}/?name=${term}`);
+    return this.http.get<Item[]>(`${this.itemsUrl}/?name=${term}`).pipe(
+      tap(x => x.length)
+    );
   }
 
   createItem(name, description, price, amount): Observable<Item> {
