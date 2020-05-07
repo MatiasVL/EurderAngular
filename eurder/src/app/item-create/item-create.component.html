@@ -1,8 +1,8 @@
 <h2>Create item</h2>
-<div><label>Name: <input #itemName placeholder="name"/></label>
-</div>
-<div>Description: <input #itemDescription placeholder="description"></div>
+<div><label>Name: <input #itemName placeholder="name"/></label></div>
+<div>Description: <input #itemDescription maxlength="255" placeholder="description"></div>
 <div>Price: <input #itemPrice placeholder="price"></div>
 <div>Amount of stock: <input #itemAmount placeholder="amount"></div>
+
 <button (click)="createItem(itemName.value,itemDescription.value,itemPrice.value,itemAmount.value)">CREATE</button>
 <button (click)="goBack()">CANCEL</button>
