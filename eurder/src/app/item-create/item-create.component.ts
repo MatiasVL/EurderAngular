@@ -19,6 +19,18 @@ export class ItemCreateComponent implements OnInit {
   ) {
   }
 
+  model = new Item();
+
+  submitted = false;
+
+  onSubmit() {
+    this.submitted = true;
+  }
+
+  get diagnostic() {
+    return JSON.stringify(this.model);
+  }
+
   ngOnInit(): void {
   }
 
@@ -30,5 +42,9 @@ export class ItemCreateComponent implements OnInit {
   createItem(name, description, price, amount): void {
     this.itemService.createItem({name}, {description}, {price}, {amount})
       .subscribe();
+  }
+
+  newItem() {
+    this.model = new Item()
   }
 }
