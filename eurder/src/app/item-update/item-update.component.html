@@ -1,5 +1,5 @@
 <div *ngIf="item">
-  <h2>Edit item: {{item.name|lowercase}}</h2>
+  <h2>Update the {{item.name|lowercase}} using the form below:</h2>
   <div><span>Id: </span>{{item.id}}</div>
   <div>Name:
     <input [(ngModel)]="item.name" placeholder="name"/>
@@ -11,8 +11,8 @@
     <input [ngModel]="item.price" placeholder="price"/>
   </div>
   <div>Stock:
-    <input [ngModel]="item.stock" placeholder="stock"/>
+    <input [ngModel]="item.amountOfStock" placeholder="stock"/>
   </div>
 </div>
-<button (click)="edit()">Save</button>
+<button (click)="save()">Save</button>
 <button (click)="goBack()">Cancel</button>

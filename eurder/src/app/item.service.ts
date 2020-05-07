@@ -11,7 +11,7 @@ export class ItemService {
   constructor(private http: HttpClient) {
   }
 
-  private itemsUrl = 'https://eurder-switchfully-solution.herokuapp.com/items';
+  private itemsUrl = 'http://eurder-switchfully-solution.herokuapp.com/items';
   httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
@@ -39,7 +39,7 @@ export class ItemService {
       description: description,
       price: price,
       stockUrgency: "to do",
-      stock: amount
+      amountOfStock: amount
     };
     return this.http.post <Item>(`${this.itemsUrl}/create`, item);
   }

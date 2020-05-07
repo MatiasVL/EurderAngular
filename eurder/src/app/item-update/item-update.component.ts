@@ -33,11 +33,8 @@ export class ItemUpdateComponent implements OnInit {
     this.location.back();
   }
 
-  update():void {
+  save():void {
     this.itemService.updateItem(this.item)
       .subscribe(()=>this.goBack());
   }
-
-  edit(){}
-
 }
