@@ -1,6 +1,6 @@
 const express = require('express');
-const application = express();
+const app = express();
 
-application.use(express.static('./dist/eurder'));
+app.use(express.static('./dist/eurder'));
 
-application.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 8080);
